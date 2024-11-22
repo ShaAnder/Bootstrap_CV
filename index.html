@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
@@ -19,6 +15,7 @@
   </head>
 
   <body class="cv-index-page">
+    <!-- header section, this contains the nav which will be affixed to the left of the screen -->
     <header id="header">
       <!-- our cv image -->
       <img
@@ -60,25 +57,74 @@
       </nav>
     </header>
     <main class="main">
-      <section class="section home" id="section-home"></section>
-      <!-- our home section will just be the two text blurbs + an image-->
-      <div class="home-content">
-        <img
-          class="home-image"
-          src="./assets/images/home_hero_image.png"
-          alt="hero image of the cv owner shown"
-          aria-label="A backdrop hero image of shaun, working at his pc on a project"
-        />
-        <h1 class="home-heading">HI! I'm Shaun</h1>
-        <h3 class="page-heading home-heading">
-          I'm a programming enthusiast, fitness enjoyer, editor, music lover,
-          web developer.
-        </h3>
-      </div>
-      <section class="section about" id="section-about">
-        <h1 class="page-heading about-heading">About</h1>
+      <!-- main home section, this contains typing text, and large photo -->
+      <section class="container section home" id="section-home">
+        <!-- our home section will just be the two text blurbs + an image-->
+        <div class="home-content">
+          <img
+            class="home-image"
+            src="./assets/images/home_hero_image.png"
+            alt="hero image of the cv owner shown"
+            aria-label="A backdrop hero image of shaun, working at his pc on a project"
+          />
+          <h1 class="home-heading">HI! I'm Shaun</h1>
+          <h3 class="page-subheading home-subheading">
+            I'm a programming enthusiast, fitness enjoyer, editor, music lover,
+            web developer.
+          </h3>
+        </div>
       </section>
-      <section class="section resume" id="section-resume">
+      <!-- About section, with our main page, full photo, details about me, skills ect -->
+      <section class="container section about" id="section-about">
+        <h1 class="page-heading about-heading">About</h1>
+        <hr class="heading-rule">
+        <h3 class="page-subheading home-subheading">
+          Junior freelance Web Developer, always looking for the next great opportunity, loves to learn new things, write great code and pet cats.
+        </h3>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+            src="./assets/images/header_image.png"
+            alt="profile image of shaun"
+            aria-label="A headshot image of the owner of the cv looking forward at the screen"
+          />
+          </div>
+          <div class="about-info">
+            <h3>Full Stack Web Developer Specializing In Front End</h3>
+            <p>Creating perfect web solutions for any and all tasks</p>
+            <div class="about-list-left">
+              <ul>
+                <li><strong>Birthday:</strong> 19/07/1990</li>
+                <li><strong>Website:</strong> <a href="#">email@example.com</a></li>
+                <li><strong>Phone:</strong> +35385 1612165</li>
+                <li><strong>City:</strong> Portlaoise, Co.Laois, Ireland</li>
+              </ul>
+            </div>
+            <div class="about-list-right">
+              <ul>
+                <li><strong>Age:</strong> (js to dynamically calculate age)</li>
+                <li><strong>Education:</strong> Diploma</li>
+                <li><strong>Email:</strong> <a href="#">s.andertonwork@gmail.com</a></li>
+                <li><strong>Freelance:</strong> Available</li>
+              </ul>
+            </div>
+            <p>
+              I have always believed in the amazing potential of the human mind and curiosity, the amount of innovation and creativity we as a species underwent to get to where we are is truly astounding. And I look forward to truly create and innovate in this field moving forward.
+            </p>
+          </div>
+          <div class="row skills-bars">
+            <div class="col-lg-6">
+              <!-- add as many of these as we need for skills-->
+              <div class="mb-3">
+                <label>HTML</label>
+                <div class="progress-bar bg-info" style="width:100%" role="progressbar" aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Resume section, this will be work and education history as well as a brief summary -->
+      <section class="container section resume" id="section-resume">
         <div class="resume-summary">
           <h1 class="page-heading about-heading">Summary</h1>
           <h3 class="page-subheading summary-name">Shaun Anderton</h3>
@@ -240,15 +286,200 @@
           </div>
         </div>
       </section>
-      <section class="section portfolio" id="section-portfolio"></section>
-      <section class="section services" id="section-services"></section>
-      <section class="section contact" id="section-contact"></section>
+      <!-- Portfolio section, going to handle the portfolio, which is a series of cards that will open a modal with more details about the portfolio item in question -->
+      <section class="container section portfolio" id="section-portfolio">
+          <!-- used example bootstrap layout for the moment -->
+          <div class="portfolio-summary" data-aos="fade-up">
+            <h1 class="page-heading about-heading">Portfolio</h1>
+            <p class="page-subheading summary-name">A small snippet of the stuff i have worked on, from university projects to hobbyist work and even production applications that I am allowed to share.</p>
+          </div>
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+  
+            <ul class="portfolio-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-product">Product</li>
+              <li data-filter=".filter-branding">Branding</li>
+              <li data-filter=".filter-books" class="">Books</li>
+            </ul><!-- End Portfolio Filters -->
+  
+            <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 400px;">
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="" style="width:300px">
+                  <div class="portfolio-info">
+                    <h4>App 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                    <a href="assets/img/portfolio/portfolio-app-1.png" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" style="position: absolute; left: 377px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="" style="width:300px">
+                  <div class="portfolio-info">
+                    <h4>Product 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                    <a href="assets/img/portfolio/portfolio-app-1.png" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding" style="position: absolute; left: 754px; top: 0px;">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="" style="width:300px">
+                  <div class="portfolio-info">
+                    <h4>Branding 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                    <a href="assets/img/portfolio/portfolio-app-1.png" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+      </section>
+      <!-- Services section, going to handle the services and the testimonials -->
+      <section class="container section services" id="section-services">
+          <div class="section-summary" data-aos="fade-up">
+            <h1 class="page-heading section-heading">Services</h1>
+            <p class="page-subheading section-description">As an established developer I make it my mission to ensure that my clients have the utmost best service, and here's what you'd be guaranteed should you choose me for your next big project</p>
+          </div>
+          <!-- used bootstrap template example for visual clarity will change later -->
+          <div>
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                <div>
+                  <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
+                  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                </div>
+              </div>       
+              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                <div>
+                  <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
+                  <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                <div>
+                  <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
+                  <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                <div>
+                  <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
+                  <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                <div>
+                  <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
+                  <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                <div>
+                  <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
+                  <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials">
+            <p>testimonials go here</p>
+          </div>
+          <!-- testimonials, we will add these later when we get some-->
+      </section>
+      <section class="container section contact" id="section-contact">
+        <!-- section header and flavor text-->
+        <div class=" section-title aos-init aos-animate" data-aos="fade-up">
+          <h1 class="page-heading section-heading">Contact</h1>
+          <p class="page-subheading section-description">Looking to get in contact? Let's talk!</p>
+        </div>
+        <!-- Form for contact, we're using a basic contact form with some inbuild php-->
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-7">
+              <!-- fields are name, email, subject line and message, with a response message that will show when user hits send message-->
+              <form action="forms/contact.php" method="post" class="php-email-form aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <label for="name-field" class="pb-2">Your Name</label>
+                    <input type="text" name="name" id="name-field" class="form-control" required="">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email-field" class="pb-2">Your Email</label>
+                    <input type="email" class="form-control" name="email" id="email-field" required="">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="subject-field" class="pb-2">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="message-field" class="pb-2">Message</label>
+                    <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- We also want to provide a google map link to show where we are, right now it's left at dublin but will be changed later as im not looking to dox exact location -->
+            <div class="col-lg-5">
+              <div class="info-panel">
+                <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>Dublin Ireland</p>
+                  </div>
+                </div>
+                <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p>+1243124125125</p>
+                  </div>
+                </div>
+                <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>info@example.com</p>
+                  </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBs2uTv9QS78s13dxDXNQ_3WJJR0s-WLGk&q=Spire,Dublin+Ireland" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
     </main>
-    <footer id="footer"></footer>
+    <!-- finally the footer, jsut going to have a copywrite in there and some basic bootstrap classes-->
+    <footer id="footer" class="footer position-relative light-background container">
+      <div class="">
+        <div class="copyright text-center">
+          <p>© <span>Copyright</span> <strong class="px-2 sitename">ShaAnder</strong> <span>All Rights Reserved</span></p>
+        </div>
+      </div>
+    </footer>
     <script
       async
       src="https://kit.fontawesome.com/c58c064348.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   </body>
 </html>
