@@ -3,62 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ShaAnder CV</title>
+    <meta content name="description">
+    <meta content name="keywords">
+    <meta name="robots" content="noindex, nofollow">
+    <!--favicons-->
+
+    <!--fonts-->
+
+    <!--vendor css files-->
+    <link href="./vendors/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./vendors/bootstrap/css/bootstrap-min.css" rel="stylesheet">
+
+    <!-- link for bootstrap styles-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--link for font awesome styles -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
       integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
       crossorigin="anonymous"
     />
+
+    
+    <!-- our styles-->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Shaun Anderton Resume</title>
   </head>
 
   <body class="cv-index-page">
     <!-- header section, this contains the nav which will be affixed to the left of the screen -->
-    <header id="header">
+    <!-- d-flex to turn it all flex and give it a flex direction of column-->
+    <header id="header" class="header d-flex flex-column">
       <!-- our cv image -->
       <img
         class="header-image"
-        src="./assets/images/header_image.png"
+        src="./assets/img/header-image.webp"
         alt="profile image of shaun"
         aria-label="A headshot image of the owner of the cv looking forward at the screen"
       />
+      <a href="index.html" class="sitename">Shaun Anderton</a>
       <!-- social links -->
-      <div class="header-social">
-        <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fa-brands fa-discord"></i></a>
-        <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <div class="social-links text-center">
+        <a href="https://x.com/SAnderton46899" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://discord.com" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/shaun-anderton-551670a9/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/shaAnder" target="_blank"><i class="fa-brands fa-github"></i></a>
       </div>
       <!-- quick nav links-->
-      <nav class="nav">
-        <ul class="nav-links">
-          <li class="nav-item">
-            <a class="nav-link" href="#section-home">Home</a>
+      <nav id="nav" class="nav-links">
+        <ul>
+          <li>
+            <a href="#section-home">
+              <i class="bi bi-house navicon"></i>
+              Home
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-about">About</a>
+          <li>
+            <a href="#section-about">
+              <i class="bi bi-person navicon"></i>
+              About
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-resume">Resume</a>
+          <li>
+            <a href="#section-resume">
+              <i class="bi bi-file-code navicon"></i>
+              Resume
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-portfolio">Portfolio</a>
+          <li>
+            <a href="#section-portfolio">
+              <i class="bi bi-images navicon"></i>
+              Portfolio
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-services">Services</a>
+          <li>
+            <a href="#section-services">
+              <i class="bi bi-hdd-rack navicon"></i>
+              Services
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-contact">Contact</a>
+          <li>
+            <a href="#section-contact">
+              <i class="bi bi-envelope navicon"></i>
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main">
       <!-- main home section, this contains typing text, and large photo -->
-      <section class="container section home" id="section-home">
+      <section class="container section home d-flex flex-column" id="section-home">
         <!-- our home section will just be the two text blurbs + an image-->
         <div class="home-content">
           <img
@@ -75,7 +113,7 @@
         </div>
       </section>
       <!-- About section, with our main page, full photo, details about me, skills ect -->
-      <section class="container section about" id="section-about">
+      <section class="container section about d-flex flex-column" id="section-about">
         <h1 class="page-heading about-heading">About</h1>
         <hr class="heading-rule">
         <h3 class="page-subheading home-subheading">
@@ -124,7 +162,7 @@
         </div>
       </section>
       <!-- Resume section, this will be work and education history as well as a brief summary -->
-      <section class="container section resume" id="section-resume">
+      <section class="container section resume d-flex flex-column" id="section-resume">
         <div class="resume-summary">
           <h1 class="page-heading about-heading">Summary</h1>
           <h3 class="page-subheading summary-name">Shaun Anderton</h3>
@@ -287,7 +325,7 @@
         </div>
       </section>
       <!-- Portfolio section, going to handle the portfolio, which is a series of cards that will open a modal with more details about the portfolio item in question -->
-      <section class="container section portfolio" id="section-portfolio">
+      <section class="container section portfolio d-flex flex-column" id="section-portfolio">
           <!-- used example bootstrap layout for the moment -->
           <div class="portfolio-summary" data-aos="fade-up">
             <h1 class="page-heading about-heading">Portfolio</h1>
@@ -339,7 +377,7 @@
               </div><!-- End Portfolio Item -->
       </section>
       <!-- Services section, going to handle the services and the testimonials -->
-      <section class="container section services" id="section-services">
+      <section class="container section services d-flex flex-column" id="section-services">
           <div class="section-summary" data-aos="fade-up">
             <h1 class="page-heading section-heading">Services</h1>
             <p class="page-subheading section-description">As an established developer I make it my mission to ensure that my clients have the utmost best service, and here's what you'd be guaranteed should you choose me for your next big project</p>
@@ -396,7 +434,7 @@
           </div>
           <!-- testimonials, we will add these later when we get some-->
       </section>
-      <section class="container section contact" id="section-contact">
+      <section class="container section contact d-flex flex-column" id="section-contact">
         <!-- section header and flavor text-->
         <div class=" section-title aos-init aos-animate" data-aos="fade-up">
           <h1 class="page-heading section-heading">Contact</h1>
