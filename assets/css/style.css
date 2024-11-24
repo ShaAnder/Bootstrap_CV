@@ -37,10 +37,11 @@
 .header {
   position: fixed;
   width: 300px;
-  color: var(--main-lightest);
-  background-color: var(--main-darkest);
   height: 100vh;
   text-align: center;
+  font-family: var(--heading-font);
+  color: var(--main-lightest);
+  background-color: var(--main-darkest);
   z-index: 1;
 }
 
@@ -55,6 +56,7 @@
 
 .header-image:hover {
   border-bottom: 8px solid var(--main-contrast);
+  margin-bottom: 20px;
 }
 
 .header .sitename {
@@ -65,7 +67,15 @@
 }
 
 .header .social-links {
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
+}
+
+.header .social-links i {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header .social-links a {
@@ -76,7 +86,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   background: color-mix(in srgb, var(--main-lightest), transparent 90%);
   color: var(--default-color);
   text-decoration: none;
@@ -117,4 +127,55 @@
 
 .nav-links a:hover {
   color: white;
+}
+
+.main {
+  margin-left: 300px;
+  display: block;
+  /* we use this here to isolate the main unicode settings from header */
+  unicode-bidi: isolate;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.home .container {
+  position: relative !important;
+  z-index: 3;
+  height: auto;
+  width: 100%;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  color: var(--main-lightest);
+  font-family: var(--default-font);
+}
+
+.home h1 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  text-shadow: 2px 3px 2px black;
+}
+
+.home h3 {
+  font-size: 30px;
+  font-weight: 200;
+  text-shadow: 1px 2px 1px black;
 }
