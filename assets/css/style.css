@@ -179,3 +179,36 @@
   font-weight: 200;
   text-shadow: 1px 2px 1px black;
 }
+
+/* css for the home page cursor */
+.typed-cursor {
+  font-weight: bold;
+  animation: blink 0.7s infinite;
+}
+
+.typed {
+  text-decoration: none; /* Remove default underline */
+  border: none; /* Ensure no border */
+  position: relative; /* Enable pseudo-element positioning */
+}
+
+.typed::after {
+  content: ""; /* Add an underline */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; /* Move the underline farther down */
+  height: 4px; /* Thickness of the underline */
+  background-color: var(--main-contrast); /* Color of the underline */
+  border-radius: 12px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
