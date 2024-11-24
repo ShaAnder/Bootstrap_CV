@@ -164,15 +164,43 @@
   transition: background-color 0.3s;
 }
 
-/* change our header toggle when it's hovered over */
-.header .header-toggle:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--main-contrast) 90%, white 15%);
-}
-
 /* moves header back left when it's being shown */
 .header.header-show {
   left: 0;
+}
+
+/* SCROLL TO TOP */
+
+.header .scroll-to-top {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 15px;
+  right: 15px;
+  color: var(--main-light);
+  background-color: var(--main-darker);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  transition: ease 0.3s;
+}
+
+/* change our header toggle / scroll to toggle button when it's hovered over */
+.header-toggle:hover,
+.scroll-to-top:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--main-contrast) 90%, white 15%);
+  color: var(--main-darker);
+}
+
+/* visible class for showing out buttons as needed*/
+.scroll-visible {
+  opacity: 1 !important;
 }
 
 /*---------------------------------------------*/
