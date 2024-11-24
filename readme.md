@@ -1,6 +1,6 @@
 ## CONTENTS
 
-- [Bootstrap CV](#bootstrap-cv)
+- [CV](#cv)
   - [What is it](#what-is-it)
   - [Project purposes](#project-purposes)
   - [Features](#features)
@@ -12,9 +12,9 @@
     - [Attribution](#attributions-)
     - [Other](#other)
 
-### Bootstrap CV
+### CV
 
-As the name suggests this is a CV designed fully in bootstrap. The idea is to create a professional resume page that can be added to a personal site.
+My professional, digital CV designed in html, css, js with a focus on utilizing the component based architecutre of bootstrap. The idea is to create a professional resume page that can be added to a personal site.
 
 #### What is it?
 
