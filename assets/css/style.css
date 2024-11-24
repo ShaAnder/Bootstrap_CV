@@ -280,3 +280,13 @@
     left: -100%;
   }
 }
+
+@media (max-width: 450px) {
+  .home h1 {
+    font-size: 40px;
+  }
+
+  .home h3 {
+    font-size: 25px;
+  }
+}
