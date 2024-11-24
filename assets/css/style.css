@@ -32,17 +32,23 @@
   text-align: center !important;
 }
 
-/* heading / navbar */
+/*---------------------------------------------*/
+/*  HEADER
+/*---------------------------------------------*/
 
 .header {
   position: fixed;
   width: 300px;
   height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
   text-align: center;
   font-family: var(--heading-font);
   color: var(--main-lightest);
   background-color: var(--main-darkest);
-  z-index: 1;
+  z-index: 9999;
+  transition: ease(0.3s);
 }
 
 .header .header-image {
@@ -55,19 +61,22 @@
 }
 
 .header-image:hover {
+  line-height: 1;
   border-bottom: 8px solid var(--main-contrast) !important;
-  margin-bottom: 20px;
 }
 
 .header .sitename {
   text-decoration: none;
+  margin: 0;
   color: var(--main-lightest);
   font-size: 30px;
   font-weight: 600;
 }
 
+/* HEADER SOCIAL LINKS */
+
 .header .social-links {
-  margin: 20px 0 20px 0;
+  margin: 0px 0 20px 0;
 }
 
 .header .social-links i {
@@ -98,9 +107,15 @@
   background: var(--main-contrast);
 }
 
+/* NAV LINKS */
+
+/* toggle mobile nav bar off until we want to use it */
+.mobile-nav-toggle {
+  display: none;
+}
+
 .nav-links ul {
   list-style: none;
-  margin-left: 1.5rem;
 }
 
 .nav-links a {
@@ -129,8 +144,42 @@
   color: white;
 }
 
+/* HEADER TOGGLE BUTTON */
+
+.header .header-toggle {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 15px;
+  right: 15px;
+  color: var(--contrast-color);
+  background-color: var(--main-darker);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+/* change our header toggle when it's hovered over */
+.header .header-toggle:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--main-contrast) 90%, white 15%);
+}
+
+/* moves header back left when it's being shown */
+.header.header-show {
+  left: 0;
+}
+
+/*---------------------------------------------*/
+/*  MAIN BODY
+/*---------------------------------------------*/
+
 .main {
-  margin-left: 300px;
   display: block;
   /* we use this here to isolate the main unicode settings from header */
   unicode-bidi: isolate;
@@ -162,7 +211,6 @@
   height: auto;
   width: 100%;
   padding-bottom: 60px;
-  right: 5%;
   color: var(--main-lightest);
   font-family: var(--default-font);
 }
@@ -210,5 +258,25 @@
   }
   50% {
     opacity: 0;
+  }
+}
+
+/*---------------------------------------------*/
+/*  MEDIA QUERIES
+/*---------------------------------------------*/
+
+@media (min-width: 1200px) {
+  /* 1200 px or higher header populates left side 
+  and main container / footer pushed left */
+  .header ~ main,
+  .header ~ #footer {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  /*hide header on anything under 1199 px*/
+  .header {
+    left: -100%;
   }
 }
