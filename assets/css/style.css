@@ -332,13 +332,13 @@ h3 {
   display: flex;
   flex-direction: row;
   padding-top: 1.5rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1.5rem;
 }
 
 .about-image img {
   padding-top: 5px;
   width: 350px;
-  margin-right: 2rem;
+  height: auto;
 }
 
 .about-list {
@@ -350,6 +350,10 @@ h3 {
 .about-list ul {
   list-style: none;
   padding-left: 0;
+}
+
+.about-list ul:first-child {
+  margin-bottom: 0;
 }
 
 .about-list li {
@@ -581,6 +585,12 @@ h3 {
 
   .about-image img {
     width: 300px;
+  }
+
+  .about-list li {
+    padding: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   .skill-percent::before {

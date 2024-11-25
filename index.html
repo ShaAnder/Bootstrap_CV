@@ -134,7 +134,7 @@
         </div>
         <div class="about-content container">
           <div class="row">
-          <div class="about-image col-lg-4">
+          <div class="about-image col-lg-4 justify-content-center">
             <img
               src="./assets/img/header-image.webp"
               alt="profile image of shaun"
@@ -174,9 +174,7 @@
               <div class="col-lg-6 ">
                 <ul>
                   <li>
-                    <i class="bi bi-chevron-right"></i><strong>Age:</strong> (js
-                    to dynamically calculate age)
-                  </li>
+                    <i class="bi bi-chevron-right"></i><strong>Age:</strong> <span class="age"></span>
                   <li>
                     <i class="bi bi-chevron-right"></i
                     ><strong>Education:</strong> Diploma
@@ -192,8 +190,7 @@
                 </ul>
               </div>
             </div>
-          </div>
-            <p class="font-weight-light">
+            <p class="font-weight-light mt-3">
               <em>
                 <span class="quote">"</span>I have always believed in the
                 amazing potential of the human mind and curiosity, the amount of
@@ -205,6 +202,7 @@
                 >
               </em>
             </p>
+          </div>
           </div>
         </div>
         <div class="skills container">
@@ -584,6 +582,24 @@
           cursorChar: "|", // Character for the cursor
           autoInsertCss: true, // Automatically insert CSS for cursor and animations
         });
+      });
+    </script>
+    <script> 
+      // age calc function we only want to run this on page load because it's not gonna change between refreshes
+      document.addEventListener("DOMContentLoaded", () => {
+        const birthDate = new Date("1990-07-19"); // Replace with your birthdate
+        const today = new Date();
+
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        const dayDiff = today.getDate() - birthDate.getDate();
+
+        // Adjust if the birthday hasn't occurred this year yet
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+          age--;
+        }
+
+        document.querySelector(".age").textContent = age;
       });
     </script>
   </body>
