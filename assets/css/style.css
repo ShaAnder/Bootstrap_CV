@@ -35,7 +35,7 @@ section {
 }
 
 .text-center {
-  text-align: left !important;
+  text-align: center !important;
 }
 
 .section-title {
@@ -429,18 +429,75 @@ h3 {
   }
 }
 
-.resume-item h4 {
-  font-weight: 400;
-  font-size: 1.2rem;
+.resume {
+  height: auto;
 }
 
-.education-item::after {
+.resume .row div:first-child > :nth-child(4) {
+  padding-bottom: 0;
+}
+
+.resume .row div:last-child > :nth-child(4) {
+  padding-bottom: 0;
+}
+
+.resume-title {
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.resume-item {
+  padding: 0 0 20px 20px;
   border-left: 2px solid var(--main-contrast);
+  position: relative;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  left: -12px;
+  top: 0px;
+  background: var(--main-lightest);
+  border: 2px solid var(--main-contrast);
+}
+
+.resume-item h4 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.resume-item h4:first-child {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  align-items: flex-start;
+  line-height: 18px;
+}
+
+.resume-item p {
+  margin-bottom: 10px;
 }
 
 .resume-date {
-  padding-left: 1rem;
+  padding-left: 10px;
+  margin-bottom: 10px;
   font-weight: 600;
+  font-size: 14px;
+}
+
+.resume-item ul {
+  margin: 0;
+  list-style: circle;
+}
+
+.resume-item ul li {
+  padding-top: 6px;
 }
 
 /*---------------------------------------------*/
@@ -508,6 +565,7 @@ h3 {
     margin: 0px auto;
   }
 }
+
 @media (max-width: 450px) {
   h1 {
     font-size: 40px;
@@ -515,6 +573,10 @@ h3 {
 
   h3 {
     font-size: 20px;
+  }
+
+  .nav-links a {
+    padding-top: 5%;
   }
 
   .about-image img {
