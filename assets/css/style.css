@@ -1,3 +1,6 @@
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 /* root variable color scheme*/
 :root {
   /* colors */
@@ -13,23 +16,62 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
+  --quote-font: "Bonheur Royale", sans-serif;
 }
 
 /* reset all margins and padding*/
-* {
+body {
   margin: 0;
   padding: 0;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
-/* default styles*/
+/*---------------------------------------------*/
+/*  DEFAULT / GENERIC STYLING
+/*---------------------------------------------*/
 
 .container {
   height: 100vh;
-  display: inline-block;
+  display: block !important;
+  padding: 2rem;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .text-center {
   text-align: center !important;
+}
+
+.page-heading {
+  padding: 1rem 0rem;
+  font-size: 50px;
+  font-family: var(--heading-font);
+  font-weight: 500;
+}
+
+.page-subheading {
+  font-size: 18px;
+}
+
+.section-title h1:after {
+  content: "";
+  position: relative;
+  display: block;
+  border-radius: 25px;
+  width: 80px;
+  height: 5px;
+  background: var(--main-contrast);
+}
+
+strong {
+  font-weight: 500;
+  font-size: 1.05rem;
 }
 
 /*---------------------------------------------*/
@@ -289,6 +331,108 @@
   }
 }
 
+/* ABOUT SECTION */
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+  padding-bottom: 0rem;
+}
+
+.about-image img {
+  padding-top: 5px;
+  width: 350px;
+  margin-right: 2rem;
+}
+
+.about-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.about-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-list li {
+  font-weight: 100;
+  padding: 0.5rem;
+  padding-left: 0;
+}
+
+.about-list li i {
+  padding-right: 5px;
+  font-size: 14px;
+  color: var(--main-contrast);
+}
+
+.about-info {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 100;
+}
+
+.skill-bars {
+  padding: 0 !important;
+}
+
+.skill-name {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--nav-font);
+  margin: 10px 0;
+}
+
+.skill-bar {
+  height: 20px;
+  background: #282828;
+  border-radius: 5px;
+}
+
+.skill-percent {
+  height: 20px;
+  background: var(--main-contrast);
+  border-radius: 5px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-percent::before {
+  content: attr(percent);
+  position: absolute;
+  padding: 4px 6px;
+  color: white;
+  background: var(--main-darker);
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-percent::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--main-darker);
+  top: -15px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 /*---------------------------------------------*/
 /*  MEDIA QUERIES
 /*---------------------------------------------*/
@@ -309,6 +453,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 @media (max-width: 450px) {
   .home h1 {
     font-size: 40px;
