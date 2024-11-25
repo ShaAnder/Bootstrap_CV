@@ -4,22 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ShaAnder CV</title>
-    <meta content name="description">
-    <meta content name="keywords">
-    <meta name="robots" content="noindex, nofollow">
+    <meta content name="description" />
+    <meta content name="keywords" />
+    <meta name="robots" content="noindex, nofollow" />
     <!--favicons-->
 
     <!--fonts-->
 
     <!--vendor css files-->
-    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css" >
-    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="./vendors/bootstrap-icons/bootstrap-icons.css" >
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./vendors/bootstrap-icons/bootstrap-icons.css"
+    />
 
     <!-- our styles-->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-    
     <title>Shaun Anderton Resume V1</title>
   </head>
 
@@ -27,7 +29,7 @@
     <!-- header section, this contains the nav which will be affixed to the left of the screen -->
     <!-- d-flex to turn it all flex and give it a flex direction of column-->
     <!-- what we're doing here is separating the page into two without an article so they are not
-     linked, this allows us to do different things with ease when it comes to responsive design -->
+    linked, this allows us to do different things with ease when it comes to responsive design -->
     <header id="header" class="header d-flex flex-column">
       <i class="header-toggle d-xl-none bi bi-list"></i>
       <a class="scroll-to-top" href="#section-home">
@@ -43,11 +45,23 @@
       <a href="index.html" class="sitename">Shaun Anderton</a>
       <!-- social links -->
       <div class="social-links text-center">
-        <a href="https://x.com/SAnderton46899" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://discord.com" target="_blank"><i class="bi bi-discord"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
-        <a href="https://www.linkedin.com/in/shaun-anderton-551670a9/" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/shaAnder" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://x.com/SAnderton46899" target="_blank"
+          ><i class="bi bi-twitter-x"></i
+        ></a>
+        <a href="https://discord.com" target="_blank"
+          ><i class="bi bi-discord"></i
+        ></a>
+        <a href="https://youtube.com" target="_blank"
+          ><i class="bi bi-youtube"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/shaun-anderton-551670a9/"
+          target="_blank"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a href="https://github.com/shaAnder" target="_blank"
+          ><i class="bi bi-github"></i
+        ></a>
       </div>
       <!-- quick nav links-->
       <nav id="nav" class="nav-links">
@@ -93,397 +107,479 @@
     </header>
     <main class="main">
       <!-- main home section, this contains typing text, and large photo -->
-      <section class="home section" id="section-home">
+      <section class="home" id="section-home">
         <!-- our home section will just be the two text blurbs + an image-->
         <img
           src="./assets/img/hero-bg.jpg"
           alt="hero image of the cv owner shown"
           aria-label="A backdrop hero image of shaun, working at his pc on a project"
         />
-        <div class="container aos-init aos-animate">
+        <div class="container">
           <h1 class="home-heading">HI! I'm Shaun</h1>
           <h3>
-            I'm A 
+            I'm A
             <span class="typed"></span>
           </h3>
         </div>
       </section>
       <!-- About section, with our main page, full photo, details about me, skills ect -->
-      <section class="container section about d-flex flex-column" id="section-about">
-        <div class="section-title">
-          <h1 class="page-heading">About</h1>
-          <h3 class="page-subheading">
-          Junior freelance Web Developer, always looking for the next great opportunity to showcase talent and skills, loves to learn new things, write great code, keep fit and pet cats.
+      <section class="about" id="section-about">
+        <div class="section-title container">
+          <h1>About</h1>
+          <h3>
+            Junior freelance Web Developer, always looking for the next great
+            opportunity to showcase talent and skills, loves to learn new
+            things, write great code, keep fit and pet cats.
           </h3>
         </div>
-        <div class="about-content">
-          <div class="about-image">
+        <div class="about-content container">
+          <div class="row">
+          <div class="about-image col-lg-4">
             <img
-            src="./assets/img/header-image.webp"
-            alt="profile image of shaun"
-            aria-label="A headshot image of the owner of the cv looking forward at the screen"
-          />
+              src="./assets/img/header-image.webp"
+              alt="profile image of shaun"
+              aria-label="A headshot image of the owner of the cv looking forward at the screen"
+            />
           </div>
-          <div class="about-info">
+          <div class="about-info col-lg-8">
             <h4 class="text-capitalize">Full Stack Web Developer</h4>
-            <p>Full stack web developer with a specialty in front end web development, specifically React, React Native, Bootstrap, Tailwind CSS and Wordpress. Always looking to create solutions for any problems a client can encounter.</p>
-            <div class="about-list">
-              <div class="about-left col-lg-6">
+            <p>
+              Full stack web developer with a specialty in front end web
+              development, specifically React, React Native, Bootstrap, Tailwind
+              CSS and Wordpress. Always looking to create solutions for any
+              problems a client can encounter.
+            </p>
+
+            <div class="row about-list">
+              <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i><strong>Birthday:</strong> 19/07/1990</li>
-                  <li><i class="bi bi-chevron-right"></i><strong>Website:</strong> <a href="#">email@example.com</a></li>
-                  <li><i class="bi bi-chevron-right"></i><strong>Phone:</strong> +353 851612165</li>
-                  <li><i class="bi bi-chevron-right"></i><strong>City:</strong> Portlaoise, Co.Laois, Ireland</li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i
+                    ><strong>Birthday:</strong> 19/07/1990
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i
+                    ><strong>Website:</strong> <a href="#">email@example.com</a>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i
+                    ><strong>Phone:</strong> +353 851612165
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i
+                    ><strong>City:</strong> Portlaoise, Co.Laois, Ireland
+                  </li>
                 </ul>
               </div>
-              <div class="about-right col-lg-6">
+              <div class="col-lg-6 ">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i><strong>Age:</strong> (js to dynamically calculate age)</li>
-                  <li><i class="bi bi-chevron-right"></i><strong>Education:</strong> Diploma</li>
-                  <li><i class="bi bi-chevron-right"></i><strong>Email:</strong> <a href="#">s.andertonwork@gmail.com</a></li>
-                  <li><i class="bi bi-chevron-right"></i><strong>Freelance:</strong> Available</li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i><strong>Age:</strong> (js
+                    to dynamically calculate age)
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i
+                    ><strong>Education:</strong> Diploma
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i><strong>Email:</strong>
+                    <a href="#">s.andertonwork@gmail.com</a>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i
+                    ><strong>Freelance:</strong> Available
+                  </li>
                 </ul>
               </div>
             </div>
-            <p class="font-weight-light ">
+          </div>
+            <p class="font-weight-light">
               <em>
-              <span class="quote">"</span>I have always believed in the amazing potential of the human mind and curiosity, the amount of innovation and creativity we as a species underwent to get to where we are is truly astounding. And I look forward to truly create and innovate in this field moving forward.<span class="quote">"</span>
+                <span class="quote">"</span>I have always believed in the
+                amazing potential of the human mind and curiosity, the amount of
+                innovation and creativity we as a species underwent to get to
+                where we are is truly astounding. And I look forward to truly
+                create and innovate in this field moving forward.<span
+                  class="quote"
+                  >"</span
+                >
               </em>
             </p>
           </div>
         </div>
-        <div class="section-title">
-          <h1 class="page-heading">Skills</h1>
-        </div>
-        <div class="row skill-bars">
+        <div class="skills container">
+          <div class="section-title">
+            <h1>Skills</h1>
+          </div>
+          <div class="row skill-bars">
             <!-- add as many of these as we need for skills-->
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">HTML</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="90%" style="max-width: 90%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="90%"
+                  style="max-width: 90%"
+                ></div>
               </div>
             </div>
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">CSS</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="65%" style="max-width: 70%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="65%"
+                  style="max-width: 70%"
+                ></div>
               </div>
             </div>
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">Javascript</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="70%" style="max-width: 70%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="70%"
+                  style="max-width: 70%"
+                ></div>
               </div>
             </div>
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">React</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="50%" style="max-width: 50%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="50%"
+                  style="max-width: 50%"
+                ></div>
               </div>
             </div>
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">React Native</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="30%" style="max-width: 30%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="30%"
+                  style="max-width: 30%"
+                ></div>
               </div>
             </div>
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">Bootstrap</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="55%" style="max-width: 55%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="55%"
+                  style="max-width: 55%"
+                ></div>
               </div>
             </div>
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">Django</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="40%" style="max-width: 40%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="40%"
+                  style="max-width: 40%"
+                ></div>
               </div>
             </div>
             <div class="skill col-lg-6">
               <div class="skill-name text-uppercase">SQL</div>
               <div class="skill-bar">
-                <div class="skill-percent" percent="40%" style="max-width: 40%;"></div>
+                <div
+                  class="skill-percent"
+                  percent="40%"
+                  style="max-width: 40%"
+                ></div>
               </div>
             </div>
+          </div>
         </div>
       </section>
       <!-- Resume section, this will be work and education history as well as a brief summary -->
-      <section class="container section resume d-flex flex-column" id="section-resume">
-        <div class="row">
-          <div class="resume-education col-lg-6">
-            <h1 class="page-heading">Education</h1>
-            <div class="education-item">
-              <h3 class="page-subheading education-name">
-                Diploma In Full Stack Web Development
-              </h3>
-              <h4 class="resume-date">2024 - 2025</h4>
-              <h4>Code Institute</h4>
-              <p>
-                Diploma covering a wide range of topics nessecary to be a full
-                stack web developer.
-              </p>
-              <ul>
-                <li>Html & Css</li>
-                <li>Javascript & Jquery</li>
-                <li>React</li>
-                <li>Python</li>
-                <li>Git</li>
-                <li>Flask & Django</li>
-                <li>Docker</li>
-                <li>Sql Databases</li>
-              </ul>
-            </div>
-            <div class="education-item">
-              <h3 class="page-subheading education-name">
-                Udemy Certificates in Web Development
-              </h3>
-              <h4 class="resume-date">2023 - 2025</h4>
-              <h4>Jonas Schmedtmann</h4>
-              <p>
-                Comprehensive online curriculum aimed at teaching a full front end webdevelopment stack. The topics for this curriculum, as they are all from the same teacher they are all covered in this one sections:
-              </p>
-              <ul>
-                <li>Building Responsive Real World Websites With HTML CSS</li>
-                <li>Complete Javascript, Beginner to Advanced</li>
-                <li>Complete React Course Beginner to Advanced, React, Vue, Next.Js and more</li>
-                <li>Advanced CSS, SaSS and Tailwind CSS</li>
-                <li>Node.JS, Express, MongoDB and More The Complete Course</li>
-              </ul>
-            </div>
-            <div class="education-item">
-              <h3 class="page-subheading education-name">
-                Github OSSU Computer Science Curriculum
-              </h3>
-              <h4 class="resume-date">2024 - Present</h4>
-              <h4>Github - OSSU</h4>
-              <p>
-                Comprehensive online degree level curriculum created by the OSSU, with the intent to teach the user a complete curriculum in computer science.
-              </p>
-            </div>
-            </div>
-            <div class="resume-experience col-lg-6">
-              <h1 class="page-heading">Professional Experience</h1>
-              <div class="work-item">
-                <h3 class="page-subheading work-name">
-                Freelance Developer and It specialist
-                </h3>
-                <h4 class="resume-date">2021 - Present</h4>
-                <h4>Freelance Contracting</h4>
+      <section class="resume" id="section-resume">
+        <div class="section-title container">
+          <h1>Resume</h1>
+          <p>
+            This is my resume where you can find my current work experience, as
+            well as up to date education, feel free to hit the download button
+            to get a copy and contact me for more information
+          </p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="resume-education col-lg-6">
+              <h2>Education</h2>
+              <div class="resume-item">
+                <h4>Diploma In Full Stack Web Development</h4>
+                <p class="resume-date">2024 - 2025</p>
+                <h6>Code Institute</h6>
                 <p>
-                Working as a freelance It specialist and more recently developer my job was to liase with clients and provide Comprehensive robust solutions to their problems. The role covers many sectors as I utilize my skills to bring satisfaction to my clientele.
+                  Diploma covering a wide range of topics nessecary to be a full
+                  stack web developer.
                 </p>
                 <ul>
-                  <li>IT support technical tasked with troubleshooting software and hardware issues</li>
+                  <li>Html & Css</li>
+                  <li>Javascript & Jquery</li>
+                  <li>React</li>
+                  <li>Python</li>
+                  <li>Git</li>
+                  <li>Flask & Django</li>
+                  <li>Docker</li>
+                  <li>Sql Databases</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Udemy Certificates in Web Development</h4>
+                <p class="resume-date">2023 - 2025</p>
+                <h4>Jonas Schmedtmann</h4>
+                <p>
+                  Comprehensive online curriculum aimed at teaching a full front
+                  end webdevelopment stack. The topics for this curriculum, as
+                  they are all from the same teacher they are all covered in this
+                  one sections:
+                </p>
+                <ul>
+                  <li>Building Responsive Real World Websites With HTML CSS</li>
+                  <li>Complete Javascript, Beginner to Advanced</li>
+                  <li>
+                    Complete React Course Beginner to Advanced, React, Vue,
+                    Next.Js and more
+                  </li>
+                  <li>Advanced CSS, SaSS and Tailwind CSS</li>
+                  <li>Node.JS, Express, MongoDB and More The Complete Course</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Github OSSU Computer Science Curriculum</h4>
+                <p class="resume-date">2024 - Present</p>
+                <h4>Github - OSSU</h4>
+                <p>
+                  Comprehensive online degree level curriculum created by the
+                  OSSU, with the intent to teach the user a complete curriculum in
+                  computer science.
+                </p>
+              </div>
+            </div>
+            <div class="resume-experience col-lg-6">
+              <h2>Professional Experience</h2>
+              <div class="resume-item">
+                <h4>Freelance Developer and It specialist</h4>
+                <p class="resume-date">2021 - Present</p>
+                <h6>Freelance Contracting</h6>
+                <p>
+                  Working as a freelance It specialist and more recently developer
+                  my job was to liase with clients and provide Comprehensive
+                  robust solutions to their problems. The role covers many sectors
+                  as I utilize my skills to bring satisfaction to my clientele.
+                </p>
+                <ul>
+                  <li>
+                    IT support technical tasked with troubleshooting software and
+                    hardware issues
+                  </li>
                   <li>Network diagnostics and repair</li>
                   <li>IT Consultant</li>
-                  <li>Front end developer specialising in react component architecture</li>
+                  <li>
+                    Front end developer specialising in react component
+                    architecture
+                  </li>
                   <li>Full stack web developer creating rich web solutions</li>
                 </ul>
               </div>
-
-            <div class="work-item">
-              <h3 class="page-subheading work-name">
-                Air filtration Tech
-              </h3>
-              <h4 class="resume-date">2018 - 2019</h4>
-              <h4>Aubren</h4>
-              <p>
-                Worked as a team building and testing advanced air filtration, purification and quarantine products, ensuring the highest possible standard with every product produced
-              </p>
-              <ul>
-                <li>Building, testing and deployment of small to largescale air filtration solutions</li>
-                <li>Repair and testing of damaged units for refurbishment</li>
-                <li>Leading small build teams for repeat projects</li>
-                <li>Working on quarantine solutions</li>
-              </ul>
-            </div>
-            <div class="education-item">
-              <h3 class="page-subheading work-name">
-                Product Tech
-              </h3>
-              <h4 class="resume-date">2017 - 2018</h4>
-              <h4>Alpha Wireless</h4>
-              <p>
-                Worked as part of a small team to build, test and deploy a wide range of 5g mobile telecommunication devices suited for use around the country and abroad
-              </p>
-              <ul>
-                <li>Building, testing and deployment of small to mid sized 5g hubs</li>
-                <li>Quality assurance of said items to ensure highest standards</li>
-                <li>Lean management and workflow optimziation</li>
-              </ul>
+              <div class="resume-item">
+                <h4>Air filtration Tech</h4>
+                <p class="resume-date">2018 - 2019</p>
+                <h6>Aubren</h6>
+                <p>
+                  Worked as a team building and testing advanced air filtration,
+                  purification and quarantine products, ensuring the highest
+                  possible standard with every product produced
+                </p>
+                <ul>
+                  <li>
+                    Building, testing and deployment of small to largescale air
+                    filtration solutions
+                  </li>
+                  <li>Repair and testing of damaged units for refurbishment</li>
+                  <li>Leading small build teams for repeat projects</li>
+                  <li>Working on quarantine solutions</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Product Tech</h4>
+                <p class="resume-date">2017 - 2018</p>
+                <h6>Alpha Wireless</h6>
+                <p>
+                  Worked as part of a small team to build, test and deploy a wide
+                  range of 5g mobile telecommunication devices suited for use
+                  around the country and abroad
+                </p>
+                <ul>
+                  <li>
+                    Building, testing and deployment of small to mid sized 5g hubs
+                  </li>
+                  <li>
+                    Quality assurance of said items to ensure highest standards
+                  </li>
+                  <li>Lean management and workflow optimziation</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Portfolio section, going to handle the portfolio, which is a series of cards that will open a modal with more details about the portfolio item in question -->
-      <section class="container section portfolio d-flex flex-column" id="section-portfolio">
-          <!-- used example bootstrap layout for the moment -->
-          <div class="portfolio-summary" data-aos="fade-up">
-            <div class="section-title">
-              <h1 class="page-heading">Portfolio</h1>
-              <p class="page-subheading summary-name">A small snippet of the stuff i have worked on, from university projects to hobbyist work and even production applications that I am allowed to share.</p>
-            </div>
-          </div>
-          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-  
-            <ul class="portfolio-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-product">Product</li>
-              <li data-filter=".filter-branding">Branding</li>
-              <li data-filter=".filter-books" class="">Books</li>
-            </ul><!-- End Portfolio Filters -->
-  
-            <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 400px;">
-              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-                <div class="portfolio-content h-100">
-                  <img src="assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="" style="width:300px">
-                  <div class="portfolio-info">
-                    <h4>App 1</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a href="assets/img/portfolio/portfolio-app-1.png" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                  </div>
-                </div>
-              </div><!-- End Portfolio Item -->
-              
+      <section class="portfolio" id="section-portfolio">
+        <div class="section-title container">
+          <h1>Portfolio</h1>
+          <p class="summary-name">
+            A small snippet of the stuff i have worked on, from university
+            projects to hobbyist work and even production applications that I am
+            allowed to share.
+          </p>
+        </div>
       </section>
       <!-- Services section, going to handle the services and the testimonials -->
-      <section class="container section services d-flex flex-column" id="section-services">
-          <div class="section-summary" data-aos="fade-up">
-            <div class="section-title">
-              <h1 class="page-heading">Services</h1>
-              <p class="page-subheading">As an established developer I make it my mission to ensure that my clients have the utmost best service, and here's what you'd be guaranteed should you choose me for your next big project</p>
+      <section class="services" id="section-services">
+          <div class="section-title container">
+            <h1>Services</h1>
+            <p class="">
+              As an established developer I make it my mission to ensure that my
+              clients have the utmost best service, and here's what you'd be
+              guaranteed should you choose me for your next big project
+            </p>
           </div>
-          </div>
-          <!-- used bootstrap template example for visual clarity will change later -->
-          <div>
-            <div class="row gy-4">
-              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-                <div>
-                  <h4 class="title"><a >Lorem Ipsum</a></h4>
-                  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                </div>
-              </div>       
-              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-                <div>
-                  <h4 class="title"><a >Dolor Sitema</a></h4>
-                  <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-                <div>
-                  <h4 class="title"><a >Sed ut perspiciatis</a></h4>
-                  <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-                <div>
-                  <h4 class="title"><a >Magni Dolores</a></h4>
-                  <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-                <div>
-                  <h4 class="title"><a >Nemo Enim</a></h4>
-                  <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 service-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
-                <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-                <div>
-                  <h4 class="title"><a >Eiusmod Tempor</a></h4>
-                  <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonials">
-            <p>testimonials go here</p>
-          </div>
-          <!-- testimonials, we will add these later when we get some-->
+        
       </section>
-      <section class="container section contact d-flex flex-column" id="section-contact">
+      <section class="contact" id="section-contact">
         <!-- section header and flavor text-->
-        <div class=" section-title aos-init aos-animate" data-aos="fade-up">
-          <h1 class="page-heading">Contact</h1>
-          <p class="page-subheading">Looking to get in contact? Let's talk!</p>    
+        <div class="section-title container">
+          <h1>Contact</h1>
+          <p class="">Looking to get in contact? Let's talk!</p>
         </div>
         <!-- Form for contact, we're using a basic contact form with some inbuild php-->
-        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-lg-7">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
               <!-- fields are name, email, subject line and message, with a response message that will show when user hits send message-->
-              <form action="forms/contact.php" method="post" class="php-email-form aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-                  <div class="col-md-6">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+              >
+                <div class="row">
+                  <div class="col-lg-12">
                     <label for="name-field" class="pb-2">Your Name</label>
-                    <input type="text" name="name" id="name-field" class="form-control" required="">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name-field"
+                      class="form-control"
+                      required=""
+                    />
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-lg-6">
                     <label for="email-field" class="pb-2">Your Email</label>
-                    <input type="email" class="form-control" name="email" id="email-field" required="">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email-field"
+                      required=""
+                    />
                   </div>
                   <div class="col-md-12">
                     <label for="subject-field" class="pb-2">Subject</label>
-                    <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      id="subject-field"
+                      required=""
+                    />
                   </div>
                   <div class="col-md-12">
                     <label for="message-field" class="pb-2">Message</label>
-                    <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="10"
+                      id="message-field"
+                      required=""
+                    ></textarea>
                   </div>
                   <div class="col-md-12 text-center">
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
                     <button type="submit">Send Message</button>
                   </div>
                 </div>
               </form>
             </div>
             <!-- We also want to provide a google map link to show where we are, right now it's left at dublin but will be changed later as im not looking to dox exact location -->
-            <div class="col-lg-5">
+            <div class="col-lg-6 col-md-6">
               <div class="info-panel">
-                <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-item>
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h3>Address</h3>
                     <p>Dublin Ireland</p>
                   </div>
                 </div>
-                <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-telephone flex-shrink-0"></i>
+                <div class="info-item d-flex" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
                   <div>
                     <h3>Call Us</h3>
                     <p>+1243124125125</p>
                   </div>
                 </div>
-                <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                <div class="info-item d-flex" data-aos-delay="400">
                   <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h3>Email Us</h3>
                     <p>info@example.com</p>
                   </div>
                 </div>
-                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBs2uTv9QS78s13dxDXNQ_3WJJR0s-WLGk&q=Spire,Dublin+Ireland" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBs2uTv9QS78s13dxDXNQ_3WJJR0s-WLGk&q=Spire,Dublin+Ireland"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 270px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </section>
     </main>
     <!-- finally the footer, jsut going to have a copywrite in there and some basic bootstrap classes-->
-    <footer id="footer" class="footer position-relative light-background container">
+    <footer
+      id="footer"
+      class="footer position-relative light-background "
+    >
       <div class="">
         <div class="copyright text-center">
-          <p>© <span>Copyright</span> <strong class="px-2 sitename">ShaAnder</strong> <span>All Rights Reserved</span></p>
-          Hero photo by <a href="https://unsplash.com/@mike_cho?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mike Cho</a> on <a href="https://unsplash.com/photos/a-large-body-of-water-surrounded-by-trees-yOMRzxSKdPg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-2 sitename">ShaAnder</strong>
+            <span>All Rights Reserved</span>
+          </p>
+          Hero photo by
+          <a
+            href="https://unsplash.com/@mike_cho?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Mike Cho</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/a-large-body-of-water-surrounded-by-trees-yOMRzxSKdPg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Unsplash</a
+          >
         </div>
       </div>
     </footer>
@@ -497,8 +593,14 @@
     <!-- additional script for typed js to function -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        new Typed('.typed', {
-          strings: ["Fitness Enjoyer", "Video Editor", "Music Lover", "Programming Enthusiast", "Web Developer..."],
+        new Typed(".typed", {
+          strings: [
+            "Fitness Enjoyer",
+            "Video Editor",
+            "Music Lover",
+            "Programming Enthusiast",
+            "Web Developer...",
+          ],
           typeSpeed: 40, // Speed in milliseconds for typing each character
           backSpeed: 20, // Speed in milliseconds for backspacing
           backDelay: 1500, // Delay before starting to backspace
@@ -510,6 +612,5 @@
         });
       });
     </script>
-
   </body>
 </html>
