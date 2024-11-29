@@ -14,10 +14,8 @@
     <!--vendor css files-->
     <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="./vendors/bootstrap-icons/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="./vendors/bootstrap-icons/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="./vendors/glightbox/css/glightbox.min.css"/>
 
     <!-- our styles-->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -126,11 +124,11 @@
       <section class="about" id="section-about">
         <div class="section-title container">
           <h1>About</h1>
-          <h3>
+          <p>
             Junior freelance Web Developer, always looking for the next great
             opportunity to showcase talent and skills, loves to learn new
             things, write great code, keep fit and pet cats.
-          </h3>
+          </p>
         </div>
         <div class="about-content container">
           <div class="row">
@@ -406,10 +404,163 @@
         <div class="section-title container">
           <h1>Portfolio</h1>
           <p class="summary-name">
-            A small snippet of the stuff i have worked on, from university
-            projects to hobbyist work and even production applications that I am
-            allowed to share.
+            This is a snapshot of some of the most recent things I have worked on. Here you can find some of my best university work, including apps that got me top grades, hobby projects, and more. 
           </p>
+        </div>
+        
+        <!-- main portfolio content, we're using isotope for filtering and glightbox to create lightboxes-->
+        <div class="container">
+          <!-- Portfolio Filters -->
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+            <ul class="portfolio-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-freelance">Freelance</li>
+              <li data-filter=".filter-portfolio">Portfolio</li>
+              <li data-filter=".filter-project">Projects</li>
+              <li data-filter=".filter-hobby">Hobby</li>
+            </ul>
+          </div>
+      
+          <!-- Portfolio Items Container -->
+          <div class="row portfolio-container g-3">
+            <!-- Portfolio Item -->
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" class="glightbox" data-gallery="portfolio-gallery" data-title="Project Title 1" data-description="This is a brief description of the project, highlighting its key details and features.">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item isotope-item col-lg-4 col-md-6 filter-hobby">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/portfolio-app-1.png" title="Hobby 1" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                  <img src="./assets/img/portfolio/portfolio-app-1.png" class="img-fluid" alt="Hobby 1">
+                </a>
+                <div class="portfolio-icons">
+                  <a href="assets/img/portfolio/portfolio-app-1.png" title="Zoom In" data-gallery="portfolio-gallery-hobby" class="glightbox">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#section-portfolio" title="More Details" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
       <!-- Services section, going to handle the services and the testimonials -->
@@ -556,51 +707,17 @@
       </div>
     </footer>
     <!-- vendor / cdn scripts -->
+    
+    <!-- bootstrap styling -->
     <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- isotope for filtering out portfolio items -->
+    <script src="./vendors/isotope/isotope.pkgd.min.js"></script>
+    <!-- glightbox for our lightbox creation and management on portfolio items -->
+    <script src="./vendors/glightbox/js/glightbox.min.js"></script>
 
     <!-- our script -->
     <script src="./assets/js/script.js"></script>
-
-    <!-- additional script for typed js to function -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new Typed(".typed", {
-          strings: [
-            "Fitness Enjoyer",
-            "Video Editor",
-            "Music Lover",
-            "Programming Enthusiast",
-            "Web Developer...",
-          ],
-          typeSpeed: 40, // Speed in milliseconds for typing each character
-          backSpeed: 20, // Speed in milliseconds for backspacing
-          backDelay: 1500, // Delay before starting to backspace
-          startDelay: 500, // Delay before starting the animation
-          loop: true, // Whether the animation should loop
-          showCursor: true, // Whether to show the cursor
-          cursorChar: "|", // Character for the cursor
-          autoInsertCss: true, // Automatically insert CSS for cursor and animations
-        });
-      });
-    </script>
-    <script> 
-      // age calc function we only want to run this on page load because it's not gonna change between refreshes
-      document.addEventListener("DOMContentLoaded", () => {
-        const birthDate = new Date("1990-07-19"); // Replace with your birthdate
-        const today = new Date();
-
-        let age = today.getFullYear() - birthDate.getFullYear();
-        const monthDiff = today.getMonth() - birthDate.getMonth();
-        const dayDiff = today.getDate() - birthDate.getDate();
-
-        // Adjust if the birthday hasn't occurred this year yet
-        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-          age--;
-        }
-
-        document.querySelector(".age").textContent = age;
-      });
-    </script>
   </body>
 </html>

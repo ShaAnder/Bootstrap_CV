@@ -52,6 +52,10 @@ section {
   background: var(--main-contrast);
 }
 
+.section-title p {
+  font-size: 20px;
+}
+
 strong {
   font-weight: 500;
   font-size: 1.05rem;
@@ -433,6 +437,8 @@ h3 {
   }
 }
 
+/* RESUME SECTION */
+
 .resume {
   height: auto;
 }
@@ -504,6 +510,156 @@ h3 {
   padding-top: 6px;
 }
 
+/* PORTFOLIO SECTION */
+
+.portfolio {
+  height: auto;
+  min-height: 100vh;
+}
+
+.portfolio .section-title {
+  margin-bottom: 2rem;
+}
+
+.portfolio .portfolio-filters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  color: var(--main-contrast);
+}
+
+.portfolio .portfolio-filters li:first-child {
+  margin-left: 0;
+}
+
+.portfolio .portfolio-filters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio-container {
+  position: relative;
+}
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.portfolio-filters li {
+  margin: 0 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.portfolio-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-content:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.portfolio-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Invisible by default */
+  transition: background 0.3s ease;
+  z-index: 1; /* Ensure overlay is above the image but below icons */
+}
+
+.portfolio-content:hover::before {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Darken the image with a semi-transparent overlay */
+}
+
+.portfolio-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px; /* Space between icons */
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Ensure icons are above the overlay */
+}
+
+.portfolio-content:hover .portfolio-icons {
+  opacity: 1; /* Show icons on hover */
+}
+
+.portfolio-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  padding: 10px;
+  border-radius: 50%; /* Circle background for icons */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.portfolio-icons a:hover {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+  color: var(--main-contrast);
+}
+
+.glightbox .gdesc {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.glightbox .gdesc h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.glightbox .gdesc p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 /*---------------------------------------------*/
 /*  MEDIA QUERIES
 /*---------------------------------------------*/
@@ -567,6 +723,14 @@ h3 {
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin: 0px auto;
+  }
+}
+
+/* specifically for portfolio filters as on 450 still sits nicely */
+@media (max-width: 575px) {
+  .portfolio .portfolio-filters li {
+    font-size: 14px;
+    margin: 0 5px;
   }
 }
 
