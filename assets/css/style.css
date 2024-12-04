@@ -642,22 +642,60 @@ h3 {
   color: var(--main-contrast);
 }
 
-.glightbox .gdesc {
-  font-size: 1rem;
-  color: #fff;
-  text-align: center;
-  margin-top: 10px;
+.portfolio-image {
+  height: 250px !important;
+  width: 410px !important;
+  object-fit: fill !important;
 }
 
-.glightbox .gdesc h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
+.gslide-title {
+  font-size: 1.5rem !important;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
-.glightbox .gdesc p {
-  font-size: 1rem;
+.gslide-desc {
+  font-size: 1rem !important;
   line-height: 1.5;
+}
+
+.ginner-container {
+  width: 700px !important;
+  height: auto;
+}
+
+/* Buttons for portfolio page */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 100%;
+
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.page-btn {
+  cursor: pointer;
+  border: none;
+  padding: 5px 15px;
+  margin: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: var(--main-darker);
+  color: white;
+  transition: ease 0.3s;
+}
+
+.page-btn:hover {
+  background-color: var(--main-contrast);
+}
+
+.page-btn.active {
+  background-color: var(--main-contrast);
 }
 
 /*---------------------------------------------*/
